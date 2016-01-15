@@ -55,6 +55,7 @@ class User < ActiveRecord::Base
   end
 
   def follows?(user)
+  
     out_follows.exists?(followee_id: user.id)
   end
 end
