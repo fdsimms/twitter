@@ -20,13 +20,23 @@ UsersSearch.prototype.handleInput = function () {
     data: data,
     dataType: "json",
     success: function (data, statusText, xhr) {
-      console.log(data);
+
 
     },
     error: function (xhr, statusText, error) {
 
     },
   });
+};
+
+UsersSearch.prototype.renderResults = function (data) {
+  this.$ul.empty();
+
+  if (data.length > 0) {
+    data.forEach(function (el) {
+      // this.$ul.html
+    });
+  }
 };
 
 
